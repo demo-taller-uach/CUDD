@@ -1,3 +1,4 @@
+# Barco navegando
 import streamlit as st
 st.title("🚢 Barco animado navegando en Streamlit")
 st.markdown("Relájate y observa cómo el barco se mueve sobre el horizonte...")
