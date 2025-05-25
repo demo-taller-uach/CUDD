@@ -1,3 +1,4 @@
+# Columnas 
 import streamlit as st
 
 left, middle, right = st.columns(3, border=True)
