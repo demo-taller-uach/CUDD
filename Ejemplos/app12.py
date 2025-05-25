@@ -1,3 +1,4 @@
+# tipos de mensajes 📢 
 import streamlit as st
 
 st.set_page_config(page_title="Ejemplo de Mensajes", layout="centered")
