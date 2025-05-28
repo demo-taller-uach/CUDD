@@ -1,7 +1,7 @@
 # mini bot
 import streamlit as st
 
-st.set_page_config(page_title="Ejemplo Chat", layout="centered")
+#st.set_page_config(page_title="Ejemplo Chat", layout="centered")
 
 st.title("💬 Mini Chatbot (solo repite lo que dices)")
 
