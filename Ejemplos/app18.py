@@ -12,7 +12,7 @@ client = OpenAI(api_key=openai_api_key)
 
 # Lee el contenido del archivo local
 try:
-    with open("archivo.txt", "r", encoding="utf-8") as f:
+    with open("https://raw.githubusercontent.com/demo-taller-uach/CUDD/refs/heads/main/Ejemplos/archivo.txt", "r", encoding="utf-8") as f:
         contexto_local = f.read()
 except FileNotFoundError:
     st.error("No se encontró el archivo 'archivo.txt'. Asegúrate de que esté en el mismo directorio.")
