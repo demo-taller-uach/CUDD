@@ -1,44 +1,42 @@
 import streamlit as st
 from openai import OpenAI
 
-# Título y descripción
-st.title("💬 Chatbot con contexto local")
+# Título
+st.title("💬 Chatbot con contexto local (desde archivo.txt)")
 
-# Carga la clave de API desde los secretos
-openai_api_key = st.secrets["api_key"] 
-
-# Crea un cliente de OpenAI
+# Cargar clave desde secretos
+openai_api_key = st.secrets["api_key"]
 client = OpenAI(api_key=openai_api_key)
 
-# Lee el contenido del archivo local
+# Leer contenido del archivo.txt
 try:
-    with open("https://raw.githubusercontent.com/demo-taller-uach/CUDD/refs/heads/main/Ejemplos/archivo.txt", "r", encoding="utf-8") as f:
+    with open("archivo.txt", "r", encoding="utf-8") as f:
         contexto_local = f.read()
 except FileNotFoundError:
-    st.error("No se encontró el archivo 'archivo.txt'. Asegúrate de que esté en el mismo directorio.")
+    st.error("❌ No se encontró el archivo 'archivo.txt'. Asegúrate de que esté en el mismo directorio que 'app.py'.")
     st.stop()
 
 # Entrada del usuario
-prompt = st.chat_input("Escribe tu mensaje:")
+prompt = st.chat_input("Haz tu pregunta sobre modelos GPT...")
 if prompt is None:
     st.stop()
 
-# Mostrar mensaje del usuario
-with st.chat_message("user"):
+# Mostrar entrada del usuario
+with st.chat_message("user", avatar="🦖"):
     st.markdown(prompt)
 
-# Llamada al modelo con el contexto incluido
+# Llamada al modelo con contexto desde archivo.txt
 stream = client.chat.completions.create(
     model="gpt-4o-mini",
     messages=[
-        {"role": "system", "content": f"Usa el siguiente contexto como referencia para responder: \n\n{contexto_local}"},
+        {"role": "system", "content": f"Usa el siguiente contexto para responder preguntas sobre modelos GPT:\n\n{contexto_local}"},
         {"role": "user", "content": prompt}
     ],
     max_tokens=800,
     temperature=0,
 )
 
-# Mostrar respuesta del asistente
+# Mostrar respuesta
 respuesta = stream.choices[0].message.content
 with st.chat_message("assistant"):
     st.write(respuesta)
