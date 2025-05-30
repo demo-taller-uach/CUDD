@@ -4,6 +4,7 @@ from openai import OpenAI
 st.sidebar.title("💬 Chatbot con contexto desde archivo")
 
 st.sidebar.write("Este es el sidebar")
+st.image("https://upload.wikimedia.org/wikipedia/commons/6/66/Escudo_UACH.svg")
 
 openai_api_key = st.secrets["api_key"]
 client = OpenAI(api_key=openai_api_key)
