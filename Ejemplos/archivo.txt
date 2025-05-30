@@ -1,0 +1,13 @@
+Los modelos GPT (Generative Pre-trained Transformer) son una serie de modelos de lenguaje desarrollados por OpenAI. A lo largo del tiempo, se han lanzado varias versiones con mejoras significativas:
+
+1. **GPT-1**: Fue el primer modelo de la serie, introducido en 2018. Demostró que los modelos de lenguaje grandes preentrenados podían ser afinados para tareas específicas.
+
+2. **GPT-2**: Lanzado en 2019, causó gran interés por su capacidad de generar texto coherente y extenso. Su arquitectura es de 1.5 mil millones de parámetros, y fue entrenado con una gran cantidad de texto de Internet.
+
+3. **GPT-3**: Introducido en 2020, con 175 mil millones de parámetros, es capaz de realizar tareas como traducción, redacción de código, generación de texto y más, sin entrenamiento adicional específico. Puede trabajar con pocos ejemplos ("few-shot learning") o incluso sin ejemplos ("zero-shot").
+
+4. **GPT-3.5**: Una mejora sobre GPT-3, utilizada como base para ChatGPT en su lanzamiento. Es más eficiente y coherente, especialmente en conversaciones largas.
+
+5. **GPT-4**: Lanzado en 2023, es multimodal (puede procesar texto e imágenes) y muestra mejor razonamiento, creatividad y exactitud. Tiene un contexto más amplio y es más robusto para tareas complejas.
+
+6. **GPT-4o ("omni")**: Presentado en 2024, GPT-4o es multimodal de forma nativa, capaz de manejar texto, imagen, audio y video en tiempo real. Ofrece gran velocidad y calidad con menos requerimientos de recursos, haciendo posible su uso en dispositivos más ligeros.
